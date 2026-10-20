@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+Disallow: /inbox/
+Disallow: /my/
+Disallow: /cliente/
+Disallow: /financial/
+Disallow: /admin/
+Disallow: /api/
