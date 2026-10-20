@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Minha conta | Grupo Velluto</title>
+<meta name="description" content="Entre ou crie sua conta no Grupo Velluto.">
+<meta property="og:title" content="Minha conta | Grupo Velluto">
+<meta property="og:description" content="Entre ou crie sua conta no Grupo Velluto.">
+<meta name="theme-color" content="#04222a">
+
+<meta name="robots" content="noindex,nofollow">
+<link rel="icon" type="image/png" href="/assets/favicon.png">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/style.css">
+<script>document.documentElement.classList.add('js')</script>
+<script src="/js/prefs.js"></script>
+</head>
+<body>
+<a class="skip" href="#main">Ir para o conteúdo</a>
+<nav class="nav" id="nav" aria-label="Menu principal">
+  <div class="nav-bar">
+    <a class="brand" href="/" aria-label="Grupo Velluto, página inicial"><img src="/assets/velluto.png" alt="Velluto"></a>
+    <div class="nav-actions">
+      <a class="acct" id="acct" href="/my/" aria-label="Minha conta" title="Minha conta"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.2 3.6-7 8-7s8 2.8 8 7"/></svg></a>
+      <button class="burger" id="burger" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu"><i></i><i></i></button>
+    </div>
+  </div>
+  <div class="menu" id="menu" aria-hidden="true">
+    <div class="menu-inner">
+      <ul class="menu-links"><li><a href="/" class="mi"><b>Início</b><small>Página inicial</small></a></li><li><a href="/about/" class="mi"><b>Sobre Nós</b><small>Quem somos e no que acreditamos</small></a></li><li><a href="/companies/" class="mi"><b>Empresas</b><small>As marcas do grupo</small></a></li><li><a href="/contact/" class="mi"><b>Contato</b><small>Fale com a gente</small></a></li><li><a href="/accessibility/" class="mi"><b>Acessibilidade</b><small>Idioma e aparência</small></a></li></ul>
+      <div class="menu-foot"><a class="btn btn-dark" href="https://wa.me/5519999894031" target="_blank" rel="noopener">WhatsApp</a><a class="btn btn-light" href="mailto:atendimentovelluto@aol.com">E-mail</a></div>
+    </div>
+  </div>
+</nav>
+<div class="frame"><main id="main">
+<header class="hero small mini"><div class="container"><h1 class="reveal d1" id="h1">Minha conta</h1><p class="lead reveal d1" id="lead">Entre ou crie sua conta para continuar.</p></div></header>
+<section><div class="container narrow">
+<div class="empty" id="loading">Carregando...</div>
+<div id="guest" class="hidden">
+ <div class="form-card">
+  <div class="tabs" role="tablist"><button type="button" role="tab" id="tab-login" aria-selected="true">Entrar</button><button type="button" role="tab" id="tab-reg" aria-selected="false">Criar conta</button></div>
+  <form id="f-login" novalidate>
+   <div class="field"><label for="l-email">E-mail</label><input id="l-email" name="l-email" type="email" autocomplete="email" required></div>
+   <div class="field"><label for="l-pass">Senha</label><input id="l-pass" name="l-pass" type="password" autocomplete="current-password" required></div>
+   <button class="btn btn-dark" type="submit">Entrar</button>
+   <div class="notice" id="n-login" role="status"></div>
+   <p class="hint hidden" id="react" style="margin-top:14px"><button type="button" class="linkbtn" id="btn-react">Reativar minha conta</button></p>
+  </form>
+  <form id="f-reg" class="hidden" novalidate>
+   <div class="field"><label for="r-name">Nome</label><input id="r-name" name="r-name" type="text" autocomplete="name" required></div>
+   <div class="row2"><div class="field"><label for="r-email">E-mail</label><input id="r-email" name="r-email" type="email" autocomplete="email" required></div><div class="field"><label for="r-phone">Telefone (com DDD)</label><input id="r-phone" name="r-phone" type="tel" autocomplete="tel" required placeholder="(19) 99999-9999"></div></div>
+   <div class="row2"><div class="field"><label for="r-pass">Senha (mínimo 8 caracteres)</label><input id="r-pass" name="r-pass" type="password" autocomplete="new-password" required></div><div class="field"><label for="r-conf">Confirmar senha</label><input id="r-conf" name="r-conf" type="password" autocomplete="new-password" required></div></div>
+   <button class="btn btn-dark" type="submit">Criar conta</button>
+   <div class="notice" id="n-reg" role="status"></div>
+  </form>
+ </div>
+</div>
+<div id="account" class="hidden">
+ <div class="panel"><div class="who"><div class="avatar" id="av">V</div><div class="grow"><h2 id="a-name"></h2><p id="a-mail"></p>
+  <div class="badges"><span class="badge ok" id="b-status">Conta ativa</span><span class="badge" id="b-client"></span><span class="badge info hidden" id="b-admin">Administrador</span></div></div>
+  <button class="btn btn-light" id="logout" type="button">Sair</button></div></div>
+ <div class="panel"><h2>Atalhos</h2><p class="hint">Acesse rápido o que está disponível para você.</p><div class="links" id="shortcuts"></div></div>
+ <form class="panel" id="f-prof" novalidate><h2>Meus dados</h2><p class="hint">Atualize seu nome, e-mail e telefone.</p>
+  <div class="field"><label for="p-name">Nome</label><input id="p-name" name="p-name" type="text" autocomplete="name" required></div>
+  <div class="row2"><div class="field"><label for="p-email">E-mail</label><input id="p-email" name="p-email" type="email" autocomplete="email" required></div><div class="field"><label for="p-phone">Telefone</label><input id="p-phone" name="p-phone" type="tel" autocomplete="tel" required></div></div>
+  <button class="btn btn-dark" type="submit">Salvar alterações</button><div class="notice" id="n-prof" role="status"></div></form>
+ <form class="panel" id="f-pass" novalidate><h2>Alterar senha</h2><p class="hint">Use uma senha com pelo menos 8 caracteres.</p>
+  <div class="field"><label for="s-cur">Senha atual</label><input id="s-cur" name="s-cur" type="password" autocomplete="current-password" required></div>
+  <div class="row2"><div class="field"><label for="s-new">Nova senha</label><input id="s-new" name="s-new" type="password" autocomplete="new-password" required></div><div class="field"><label for="s-conf">Confirmar nova senha</label><input id="s-conf" name="s-conf" type="password" autocomplete="new-password" required></div></div>
+  <button class="btn btn-dark" type="submit">Alterar senha</button><div class="notice" id="n-pass" role="status"></div></form>
+ <form class="panel danger" id="f-deact" novalidate><h2>Desativar conta</h2><p class="hint">Sua conta fica pausada e você sai do site. Para voltar, basta entrar de novo e escolher reativar.</p>
+  <div class="field"><label for="d-pass">Digite sua senha para confirmar</label><input id="d-pass" name="d-pass" type="password" autocomplete="current-password" required></div>
+  <button class="btn btn-light" type="submit">Desativar conta</button><div class="notice" id="n-deact" role="status"></div></form>
+ <form class="panel danger" id="f-del" novalidate><h2>Apagar conta</h2><p class="hint">Isso apaga sua conta e todos os seus dados de forma definitiva. Não dá para desfazer.</p>
+  <div class="field"><label for="x-pass">Digite sua senha para confirmar</label><input id="x-pass" name="x-pass" type="password" autocomplete="current-password" required></div>
+  <button class="btn btn-danger" type="submit">Apagar minha conta</button><div class="notice" id="n-del" role="status"></div></form>
+</div>
+</div></section>
+</main>
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div><a class="brand" href="/"><img src="/assets/velluto.png" alt="Velluto"></a><p>O Grupo Velluto administra empresas e constrói o futuro digital.</p></div>
+      <div><h4>Navegação</h4><a href="/">Início</a><a href="/about/">Sobre Nós</a><a href="/companies/">Empresas</a><a href="/contact/">Contato</a><a href="/accessibility/">Acessibilidade</a></div>
+      <div><h4>Contato</h4><a href="tel:+5519999894031">(19) 99989-4031</a><a href="mailto:atendimentovelluto@aol.com">atendimentovelluto@aol.com</a><a href="https://wa.me/5519999894031" target="_blank" rel="noopener">WhatsApp</a></div>
+    </div>
+    <div class="copy"><span>© 2026 Grupo Velluto. Todos os direitos reservados.</span><a href="/inbox/" style="display:inline;font-size:.8rem">Área restrita</a></div>
+  </div>
+</footer></div>
+<script src="/js/companies.js"></script>
+<script src="/js/main.js"></script>
+<script src="/js/i18n.js"></script>
+<script src="/js/app.js"></script>
+<script src="/js/my.js"></script>
+</body>
+</html>
