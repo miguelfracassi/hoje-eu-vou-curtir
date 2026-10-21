@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Criar pagamentos | Grupo Velluto</title>
+<meta name="description" content="Gere cobranças Pix com link e QR Code.">
+<meta property="og:title" content="Criar pagamentos | Grupo Velluto">
+<meta property="og:description" content="Gere cobranças Pix com link e QR Code.">
+<meta name="theme-color" content="#04222a">
+
+<meta name="robots" content="noindex,nofollow">
+<link rel="icon" type="image/png" href="/assets/favicon.png">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/style.css">
+<script>document.documentElement.classList.add('js')</script>
+<script src="/js/prefs.js"></script>
+</head>
+<body>
+<a class="skip" href="#main">Ir para o conteúdo</a>
+<nav class="nav" id="nav" aria-label="Menu principal">
+  <div class="nav-bar">
+    <a class="brand" href="/" aria-label="Grupo Velluto, página inicial"><img src="/assets/velluto.png" alt="Velluto"></a>
+    <div class="nav-actions">
+      <a class="acct" id="acct" href="/my/" aria-label="Minha conta" title="Minha conta"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.2 3.6-7 8-7s8 2.8 8 7"/></svg></a>
+      <button class="burger" id="burger" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu"><i></i><i></i></button>
+    </div>
+  </div>
+  <div class="menu" id="menu" aria-hidden="true">
+    <div class="menu-inner">
+      <ul class="menu-links"><li><a href="/" class="mi"><b>Início</b><small>Página inicial</small></a></li><li><a href="/about/" class="mi"><b>Sobre Nós</b><small>Quem somos e no que acreditamos</small></a></li><li><a href="/companies/" class="mi"><b>Empresas</b><small>As marcas do grupo</small></a></li><li><a href="/contact/" class="mi"><b>Contato</b><small>Fale com a gente</small></a></li><li><a href="/apoie/" class="mi"><b>Apoie</b><small>Ajude o grupo a crescer</small></a></li><li><a href="/accessibility/" class="mi"><b>Acessibilidade</b><small>Idioma e aparência</small></a></li></ul>
+      <div class="menu-foot"><a class="btn btn-dark" href="https://wa.me/5519999894031" target="_blank" rel="noopener">WhatsApp</a><a class="btn btn-light" href="mailto:atendimentovelluto@aol.com">E-mail</a></div>
+    </div>
+  </div>
+</nav>
+<div class="frame"><main id="main">
+<header class="hero small mini"><div class="container"><h1 class="reveal d1">Criar pagamentos</h1><p class="lead reveal d1">Gere um link e um QR Code Pix para receber.</p></div></header>
+<section><div class="container narrow">
+<div class="gate hidden" id="gate">
+  <h2>Área restrita</h2><p>Digite a senha para criar cobranças.</p>
+  <form id="gate-form" autocomplete="off"><input id="pin" type="password" inputmode="numeric" autocomplete="off" maxlength="20" placeholder="••••" aria-label="Senha" data-no-i18n><button class="btn btn-dark" type="submit" style="width:100%">Entrar</button></form>
+  <div class="notice" id="gate-err" role="alert" style="margin-top:14px"></div>
+</div>
+<div class="hidden" id="app">
+  <div class="panel"><h2>Nova cobrança</h2><p class="hint">Informe o valor. Vamos gerar o link, o QR Code Pix e acompanhar o pagamento.</p>
+    <form id="form" novalidate>
+      <div class="field"><label for="amount">Valor (R$)</label><input id="amount" inputmode="decimal" autocomplete="off" placeholder="0,00" required data-no-i18n></div>
+      <div class="field"><label for="desc">Descrição <small>(opcional)</small></label><input id="desc" maxlength="120" placeholder="Ex.: Entrada do projeto"></div>
+      <div class="notice" id="err" role="alert"></div>
+      <div class="btn-row"><button class="btn btn-dark" id="go" type="submit">Gerar cobrança</button><button class="btn btn-light" id="out" type="button">Sair</button></div>
+    </form>
+  </div>
+  <div class="panel hidden" id="result" aria-live="polite">
+    <div class="pay-head"><span class="pay-amt" id="r-amt" data-no-i18n></span><span class="badge warn" id="r-badge">Aguardando pagamento</span></div>
+    <p class="hint" id="r-desc" data-no-i18n></p>
+    <div class="pay-grid">
+      <div class="qr-box"><img id="r-qr" alt="QR Code Pix" width="240" height="240"></div>
+      <div>
+        <div class="field"><label for="r-link">Link de pagamento</label><div class="copyrow"><input id="r-link" readonly data-no-i18n><button class="btn btn-light" type="button" data-copy="r-link">Copiar</button></div></div>
+        <div class="field"><label for="r-code">Pix copia e cola</label><div class="copyrow"><input id="r-code" readonly data-no-i18n><button class="btn btn-light" type="button" data-copy="r-code">Copiar</button></div></div>
+        <div class="btn-row"><a class="btn btn-dark" id="r-open" href="#" target="_blank" rel="noopener">Abrir link</a><button class="btn btn-light" type="button" id="r-new">Nova cobrança</button></div>
+      </div>
+    </div>
+  </div>
+  <div class="panel"><h2>Últimas cobranças</h2><p class="hint">As 20 mais recentes.</p>
+    <div class="tbl-wrap"><table class="tbl"><thead><tr><th>Data</th><th>Descrição</th><th class="num">Valor</th><th>Status</th><th></th></tr></thead><tbody id="list" data-no-i18n></tbody></table></div>
+    <div class="empty hidden" id="no-list">Nenhuma cobrança ainda.</div>
+  </div>
+</div>
+</div></section>
+</main>
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div><a class="brand" href="/"><img src="/assets/velluto.png" alt="Velluto"></a><p>O Grupo Velluto administra empresas e constrói o futuro digital.</p></div>
+      <div><h4>Navegação</h4><a href="/">Início</a><a href="/about/">Sobre Nós</a><a href="/companies/">Empresas</a><a href="/contact/">Contato</a><a href="/accessibility/">Acessibilidade</a></div>
+      <div><h4>Contato</h4><a href="tel:+5519999894031">(19) 99989-4031</a><a href="mailto:atendimentovelluto@aol.com">atendimentovelluto@aol.com</a><a href="https://wa.me/5519999894031" target="_blank" rel="noopener">WhatsApp</a></div>
+    </div>
+    <div class="copy"><span>© 2026 Grupo Velluto. Todos os direitos reservados.</span><a href="/inbox/" style="display:inline;font-size:.8rem">Área restrita</a></div>
+  </div>
+</footer></div>
+<script src="/js/companies.js"></script>
+<script src="/js/main.js"></script>
+<script src="/js/i18n.js"></script>
+<script src="/js/app.js"></script>
+<script src="/js/criarpagamentos.js"></script>
+</body>
+</html>
