@@ -1,0 +1,7 @@
+{
+  "name": "grupo-velluto",
+  "private": true,
+  "version": "2.1.0",
+  "engines": { "node": ">=20" },
+  "dependencies": { "@neondatabase/serverless": "^1.0.0", "web-push": "^3.6.7" }
+}
