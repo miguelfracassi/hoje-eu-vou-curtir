@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Financeiro | Grupo Velluto</title>
+<meta name="description" content="Faturas e pagamentos de clientes do Grupo Velluto.">
+<meta property="og:title" content="Financeiro | Grupo Velluto">
+<meta property="og:description" content="Faturas e pagamentos de clientes do Grupo Velluto.">
+<meta name="theme-color" content="#04222a">
+
+<meta name="robots" content="noindex,nofollow">
+<link rel="icon" type="image/png" href="/assets/favicon.png">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<link rel="manifest" href="/manifest.webmanifest">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/style.css">
+<script>document.documentElement.classList.add('js')</script>
+<script src="/js/prefs.js"></script>
+</head>
+<body>
+<a class="skip" href="#main">Ir para o conteúdo</a>
+<nav class="nav" id="nav" aria-label="Menu principal">
+  <div class="nav-bar">
+    <a class="brand" href="/" aria-label="Grupo Velluto, página inicial"><img src="/assets/velluto.png" alt="Velluto"></a>
+    <div class="nav-actions">
+      <a class="acct" id="acct" href="/my/" aria-label="Minha conta" title="Minha conta"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.2 3.6-7 8-7s8 2.8 8 7"/></svg></a>
+      <button class="burger" id="burger" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu"><i></i><i></i></button>
+    </div>
+  </div>
+  <div class="menu" id="menu" aria-hidden="true">
+    <div class="menu-inner">
+      <ul class="menu-links"><li><a href="/" class="mi"><b>Início</b><small>Página inicial</small></a></li><li><a href="/about/" class="mi"><b>Sobre Nós</b><small>Quem somos e no que acreditamos</small></a></li><li><a href="/companies/" class="mi"><b>Empresas</b><small>As marcas do grupo</small></a></li><li><a href="/contact/" class="mi"><b>Contato</b><small>Fale com a gente</small></a></li><li><a href="/apoie/" class="mi"><b>Apoie</b><small>Ajude o grupo a crescer</small></a></li><li><a href="/accessibility/" class="mi"><b>Acessibilidade</b><small>Idioma e aparência</small></a></li></ul>
+      <div class="menu-foot"><a class="btn btn-dark" href="https://wa.me/5519999894031" target="_blank" rel="noopener">WhatsApp</a><a class="btn btn-light" href="mailto:atendimentovelluto@aol.com">E-mail</a></div>
+    </div>
+  </div>
+</nav>
+<div class="frame"><main id="main">
+<header class="hero small mini"><div class="container"><h1 class="reveal d1" id="h1">Financeiro</h1><p class="lead reveal d1" id="lead">Faturas, compras futuras e pagamentos da sua conta.</p></div></header>
+<section><div class="container narrow">
+<div class="notice" id="n-fin" role="status" style="margin:0 0 16px"></div>
+<div class="stats"><div class="stat"><span>Em aberto</span><b id="s-open">—</b></div><div class="stat"><span>Pago</span><b id="s-paid">—</b></div><div class="stat"><span>Próximo vencimento</span><b id="s-next">—</b></div></div>
+<div class="panel" id="fut-panel"><h2>Compras futuras</h2><p class="hint">Cobranças que ainda vão vencer. Ative os avisos no celular para saber quando uma vence.</p><div id="fut" data-no-i18n></div><div class="empty hidden" id="no-fut" style="padding:28px 0">Nenhuma cobrança a vencer.</div><div class="btn-row"><a class="btn btn-light" href="/my/#app-panel">Ativar avisos no celular</a><a class="btn btn-light" href="/chat/">Falar com a equipe</a></div></div>
+<div class="panel" id="inv-panel"><h2>Faturas</h2><p class="hint">Cobranças e pagamentos da sua conta.</p><div class="tbl-wrap"><table class="tbl"><thead><tr><th>Descrição</th><th>Vencimento</th><th class="num">Valor</th><th>Status</th><th>Ações</th></tr></thead><tbody id="inv" data-no-i18n></tbody></table></div><div class="empty hidden" id="no-inv">Nenhuma fatura por aqui ainda.</div></div>
+<div class="panel hidden" id="sup-panel"><h2>Meus apoios por mês</h2><p class="hint">Seus apoios ao grupo, agrupados por mês.</p><div id="sup" data-no-i18n></div><div class="btn-row"><a class="btn btn-light" href="/apoie/">Apoiar o grupo</a></div></div>
+</div></section>
+</main>
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div><a class="brand" href="/"><img src="/assets/velluto.png" alt="Velluto"></a><p>O Grupo Velluto administra empresas e constrói o futuro digital.</p></div>
+      <div><h4>Navegação</h4><a href="/">Início</a><a href="/about/">Sobre Nós</a><a href="/companies/">Empresas</a><a href="/contact/">Contato</a><a href="/accessibility/">Acessibilidade</a></div>
+      <div><h4>Contato</h4><a href="tel:+5519999894031">(19) 99989-4031</a><a href="mailto:atendimentovelluto@aol.com">atendimentovelluto@aol.com</a><a href="https://wa.me/5519999894031" target="_blank" rel="noopener">WhatsApp</a></div>
+    </div>
+    <div class="copy"><span>© 2026 Grupo Velluto. Todos os direitos reservados.</span><a href="/inbox/" style="display:inline;font-size:.8rem">Área restrita</a></div>
+  </div>
+</footer></div>
+<script src="/js/companies.js"></script>
+<script src="/js/main.js"></script>
+<script src="/js/i18n.js"></script>
+<script src="/js/app.js"></script>
+<script src="/js/pwa.js"></script>
+<script src="/js/financial.js"></script>
+</body>
+</html>
