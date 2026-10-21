@@ -1,0 +1,22 @@
+{
+  "id": "/",
+  "name": "Grupo Velluto",
+  "short_name": "Velluto",
+  "description": "Faturas, compras, avisos e chat com a equipe do Grupo Velluto.",
+  "lang": "pt-BR",
+  "start_url": "/my/?source=app",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#04222a",
+  "theme_color": "#04222a",
+  "icons": [
+    { "src": "/assets/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "/assets/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "/assets/icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ],
+  "shortcuts": [
+    { "name": "Financeiro", "url": "/financial/", "icons": [{ "src": "/assets/icon-192.png", "sizes": "192x192" }] },
+    { "name": "Chat", "url": "/chat/", "icons": [{ "src": "/assets/icon-192.png", "sizes": "192x192" }] }
+  ]
+}
